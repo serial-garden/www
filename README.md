@@ -1,5 +1,5 @@
 ---
-description: 'lisa@axonterminal.io | emlisa#3162 (discord) | +1 (971) 317-9338'
+description: lisa@axonterminal.io
 ---
 
 # About Me
