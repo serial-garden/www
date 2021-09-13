@@ -28,7 +28,7 @@ make -j
 > Testing can be used very effectively to show the presence of bugs but never to show their absence.  
 > [~EWD](https://www.cs.utexas.edu/users/EWD/transcriptions/EWD03xx/EWD303.html)
 
-In the simplest case, failure is **decidable** \(and therefore **finite**\). Given a **program** $$k \in K$$ and ****a **size** \(number of [**ranks**](https://www.mpich.org/static/docs/v3.3/www3/MPI_Comm_rank.html)\) $$n \in \Bbb{N}$$, we can generically express a **program result** as $$P_\text{decidable}(k, n)$$.
+In the simplest case, failure is **decidable** \(and therefore **finite**\). Given a **program** $$k \in K$$ and ****a **size** \(number of [**ranks**](https://www.mpich.org/static/docs/v3.3/www3/MPI_Comm_rank.html)\) $$n \in \Bbb{N}$$, we can generically express a **program result** as $$P(k, n)$$.
 
 $$
 \text{$\forall (k,n) \in (K, \Bbb{N}) : P(k,n) \in
