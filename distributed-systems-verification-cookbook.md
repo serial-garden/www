@@ -653,7 +653,7 @@ In practice, timeouts frequently become a source of **nondeterminism** because o
 
 ### Method: Progress Tracking
 
-Introducing a concept of **progress** allows us to compute valid values for $$s$$ based only on $$k$$ instead of $$(k,n)$$. This means that a **single timeout value** $$s$$ **can be used for all values of** $$n$$.
+Introducing a concept of **progress** allows us to compute valid values for $$s$$ based only on $$k$$ instead of $$(k,n)$$. Measuring the time between progress updates rather than the total program runtime eliminates $$n$$ as a factor influencing $$s$$. This means that a **single timeout value** $$s$$ **can be used for all values of** $$n$$.
 
 $$
 S(k) = \{\text{$s : s \in \Bbb{Z}$ and $\forall n \in \Bbb{N}, P_\text{timeout}(s,k,n) \ne \text{TIMEOUT}$}\} \\
