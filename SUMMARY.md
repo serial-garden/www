@@ -13,5 +13,5 @@
 ---
 
 * [Solvers for Applied Formal Verification](solvers-for-applied-formal-verification.md)
-* [Distributed Systems Verification Cookbook](runtime-verification-cookbook.md)
+* [Distributed Systems Verification Cookbook](distributed-systems-verification-cookbook.md)
 
