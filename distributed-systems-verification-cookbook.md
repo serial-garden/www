@@ -1133,9 +1133,17 @@ sys  0m5.782s
 
 ## State
 
-### Method: Input Caching
+Ephemeral containers make ideal runtime environments for reproducible and deterministic execution. When these aren't available, [**impure state**](https://nixos.wiki/wiki/Nix_Expression_Language#Pure) can affect the process's control flow, changing the content and hash of the result.
 
-### Method: Lifecycle Management
+### Method: Single Step Hermetic Builds
+
+Using a hermetic build system like Nix or Bazel to deterministically compose the software and runtime infrastructure **in a single step** mitigates configuration mistakes by enforcing closure purity.
+
+These are difficult to configure for compile targets that don't directly support them. Bridge programs like [**cabal2nix**](https://github.com/NixOS/cabal2nix) and [**rules\_foreign\_cc**](https://github.com/bazelbuild/rules_foreign_cc) ****get lower community community support due to the niche intersections.
+
+### Method: Inline Lifecycle Management
+
+Build tools like [**Nix**](https://github.com/NixOS/nix) / [**Hydra**](https://github.com/NixOS/hydra)  often roll their own job scheduler implementations for implementing remote build dispatch. Modifying these tools or their supporting infrastructure is not always a feasible solution for gaining more fine-grained resource management control \(like [**consumable resources**](https://github.com/NixOS/hydra/pull/588)\). Managing lifecycles of state in-line with application critical path and progress code \(when applications query resource and information API calls\) guards against deadlock and starvation while increasing control of resource usage. 
 
 ## Determinism
 
